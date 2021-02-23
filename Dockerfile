@@ -9,7 +9,7 @@ ENV HOSTNAME XorMon
 
 # add product installations
 ENV XORMON_VER_MAJ "0.9.12"
-ENV XORMON_VER_MIN "-25"
+ENV XORMON_VER_MIN "-41"
 
 ENV XORMON_VER "$XORMON_VER_MAJ$XORMON_VER_MIN"
 
@@ -17,7 +17,7 @@ ENV XORMON_VER "$XORMON_VER_MAJ$XORMON_VER_MIN"
 EXPOSE 8443
 
 # download RPM from official website
-ADD https://xormon.com/download/xormon-$XORMON_VER.noarch.rpm /tmp
+ADD https://xormon.com/download-static/xormon-$XORMON_VER.noarch.rpm /tmp
 
 # install XorMon RPM
 RUN rpm -Uvh /tmp/xormon-$XORMON_VER.noarch.rpm
